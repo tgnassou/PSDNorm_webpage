@@ -175,14 +175,23 @@
         <h2 class="title is-3">Results</h2>
         <div class="content has-text-justified">
           <p>
-            PSDNorm consistently improves score across
-            CNN and CNN-Transformer architectures.
-            Gains are especially pronounced on unseen datasets and low-data regimes.
+            PSDNorm is testing over 10 large-scale sleep staging datasets, covering 10K subjects and multiple recording devices.
+            We evaluate robustness under domain shift, generalization to unseen datasets, and data efficiency in low-data regimes.
+          </p>
+          <p>
+            PSDNorm consistently improves score for different architectures (USleep and CNN-Transformers)
+            compared to existing normalization layers (BatchNorm, LayerNorm, InstanceNorm).
+            This shows the importance of aligning temporal correlations and spectral structure in signals.
           </p>
           <figure class="image">
             <img src="static/images/cd_diagram.png" alt="PSDNorm critical diagram">
           </figure>
-            <figure class="image">
+          <p>
+            A important feature for medical applications is good performance for any subjects.
+            The scatter plot below shows that PSDNorm improves performance for most subjects,
+            and especially for those with low performance under BatchNorm, which are clinically the most important to improve.
+          </p>
+          <figure class="image">
             <img src="static/images/scatter.png" alt="PSDNorm results" style="max-width: 70%;">
             </figure>
         </div>
